@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmRkNGJmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBkOTQ4OCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBvbHlnb24gcG9pbnRzPSIzMiw0IDYwLDIyIDMyLDYwIDQsMjIiIGZpbGw9InVybCgjZykiLz4KICA8cG9seWdvbiBwb2ludHM9IjMyLDQgNjAsMjIgMzIsMjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xOCkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMyLDQgNCwyMiAzMiwyMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA4KSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNCwyMiAzMiw2MCAzMiwyMiIgZmlsbD0icmdiYSgwLDAsMCwwLjIpIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2MCwyMiAzMiw2MCAzMiwyMiIgZmlsbD0icmdiYSgwLDAsMCwwLjA4KSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzIsNCA2MCwyMiAzMiw2MCA0LDIyIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8bGluZSB4MT0iNCIgeTE9IjIyIiB4Mj0iNjAiIHkyPSIyMiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmRkNGJmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBkOTQ4OCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBvbHlnb24gcG9pbnRzPSIzMiw0IDYwLDIyIDMyLDYwIDQsMjIiIGZpbGw9InVybCgjZykiLz4KICA8cG9seWdvbiBwb2ludHM9IjMyLDQgNjAsMjIgMzIsMjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xOCkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMyLDQgNCwyMiAzMiwyMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA4KSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNCwyMiAzMiw2MCAzMiwyMiIgZmlsbD0icmdiYSgwLDAsMCwwLjIpIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2MCwyMiAzMiw2MCAzMiwyMiIgZmlsbD0icmdiYSgwLDAsMCwwLjA4KSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzIsNCA2MCwyMiAzMiw2MCA0LDIyIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC41KSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8bGluZSB4MT0iNCIgeTE9IjIyIiB4Mj0iNjAiIHkyPSIyMiIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMykiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=">
+<title>SCIERGE | Trip Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+<style>
+/* Font Awesome font-display override */
+@font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; }
+@font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; }
+
+:root {
+  --dark-950: #06060a;
+  --dark-900: #0a0a0f;
+  --dark-800: #12121a;
+  --dark-700: #1a1a25;
+  --dark-600: #222232;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --text-primary: #f0f0f5;
+  --text-muted: #6b7280;
+  --border: rgba(45,212,191,0.15);
+  --border-soft: rgba(255,255,255,0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--dark-950);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 109px; /* nav 65px + ticker 44px */
+}
+
+/* ── NAV ── */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(6,6,10,0.96);
+  border-bottom: 1px solid var(--border-soft);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 65px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; z-index: 101; }
+.nav-emblem {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-600));
+  box-shadow: 0 0 18px rgba(45,212,191,0.35);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
+.nav-emblem::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 60%);
+}
+.nav-emblem svg { width: 18px; height: 18px; position: relative; z-index: 1; }
+.nav-wordmark { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.3px; color: var(--text-primary); line-height: 1; }
+.nav-wordmark .c { color: var(--teal-400); }
+
+/* Nav links — hidden on mobile, shown on ≥640px */
+.nav-links { display: none; list-style: none; gap: 1.5rem; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
+  font-weight: 500; transition: color 0.2s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--teal-400); }
+.nav-links a.active { color: var(--teal-400); }
+
+/* CTA button */
+
+/* ── NAV SEARCH ── */
+.nav-search-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  background: rgba(45,212,191,0.1);
+  border: 1px solid rgba(45,212,191,0.2);
+  border-radius: 8px;
+  color: var(--teal-400);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+.nav-search-btn:hover { background: rgba(45,212,191,0.18); border-color: rgba(45,212,191,0.4); }
+
+.nav-search-wrap {
+  display: flex; align-items: center;
+  max-width: 0; overflow: hidden;
+  transition: max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease;
+  opacity: 0; position: relative;
+}
+.nav-search-wrap.open { max-width: 260px; opacity: 1; }
+@media (max-width: 767px) {
+  .nav-search-wrap.open { max-width: 160px; }
+}
+
+.nav-search-input {
+  background: var(--dark-700);
+  border: 1px solid rgba(45,212,191,0.25);
+  border-radius: 8px;
+  padding: 0.45rem 2rem 0.45rem 0.75rem;
+  color: var(--text-primary);
+  font-family: inherit; font-size: 0.82rem;
+  outline: none; width: 100%;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.nav-search-input:focus { border-color: rgba(45,212,191,0.55); }
+.nav-search-input::placeholder { color: var(--text-muted); }
+
+.nav-search-clear {
+  position: absolute; right: 8px;
+  background: none; border: none;
+  color: var(--text-muted); cursor: pointer;
+  font-size: 0.7rem; padding: 2px; display: none;
+}
+.nav-search-clear.visible { display: block; }
+
+.nav-search-results {
+  position: fixed;
+  top: 64px; left: 50%; transform: translateX(-50%);
+  width: min(calc(100vw - 2rem), 420px);
+  background: var(--dark-800);
+  border: 1px solid rgba(45,212,191,0.2);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+  z-index: 200; overflow: hidden;
+  animation: slideDown 0.2s ease;
+}
+.nav-search-result-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer; transition: background 0.15s;
+  text-decoration: none;
+}
+.nav-search-result-item:last-child { border-bottom: none; }
+.nav-search-result-item:hover { background: rgba(45,212,191,0.06); }
+.nav-search-result-icon { color: var(--teal-400); font-size: 0.85rem; width: 18px; text-align: center; flex-shrink: 0; }
+.nav-search-result-name { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
+.nav-search-result-loc { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+.nav-search-no-results { padding: 1rem; text-align: center; font-size: 0.82rem; color: var(--text-muted); }
+
+.nav-cta {
+  display: inline-flex;
+  font-size: 0.7rem; padding: 0.45rem 0.85rem;
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-600));
+  color: var(--dark-950); border: none; padding: 0.55rem 1.25rem;
+  border-radius: 99px; font-family: inherit; font-size: 0.78rem; font-weight: 700;
+  cursor: pointer; box-shadow: 0 4px 20px rgba(45,212,191,0.3);
+  transition: box-shadow 0.2s, transform 0.15s; white-space: nowrap;
+}
+.nav-cta:hover { box-shadow: 0 8px 28px rgba(45,212,191,0.45); transform: translateY(-1px); }
+
+/* Hamburger */
+.mobile-menu-btn {
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 8px; background: rgba(45,212,191,0.1);
+  border: 1px solid rgba(45,212,191,0.2); border-radius: 8px;
+  cursor: pointer; z-index: 101;
+}
+.mobile-menu-btn span {
+  width: 22px; height: 2px; background: var(--teal-400);
+  border-radius: 2px; transition: all 0.3s ease; display: block;
+}
+nav.mobile-open .mobile-menu-btn span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+nav.mobile-open .mobile-menu-btn span:nth-child(2) { opacity: 0; }
+nav.mobile-open .mobile-menu-btn span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* ── MOBILE: hide Book Now, show in dropdown ── */
+@media (max-width: 767px) {
+  .nav-cta { display: none !important; }
+}
+nav.mobile-open .nav-cta {
+  display: flex !important;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  border-radius: 0;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.95rem; font-weight: 700;
+  background: var(--dark-800);
+  color: var(--teal-400) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  animation: slideDown 0.3s ease;
+  text-decoration: none;
+  z-index: 99;
+}
+
+nav.mobile-open .nav-links {
+  display: flex; flex-direction: column;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--dark-800); padding: 0.75rem; gap: 0;
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: slideDown 0.25s ease;
+}
+nav.mobile-open .nav-links li { border-bottom: 1px solid var(--border-soft); }
+nav.mobile-open .nav-links li:last-child { border-bottom: none; }
+nav.mobile-open .nav-links a { display: flex; align-items: center; padding: 0.9rem 0.5rem; font-size: 0.9rem; min-height: 44px; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 640px) {
+  nav { padding: 1rem 2rem; }
+  .nav-links { display: flex; }
+  /* nav-cta shown by default on desktop */
+  .mobile-menu-btn { display: none; }
+}
+@media (min-width: 1024px) {
+  nav { padding: 1.1rem 4rem; }
+}
+
+/* ── TICKER ── */
+.icon-ticker {
+  position: fixed;
+  top: 65px;
+  left: 0; right: 0;
+  z-index: 49;
+  background: rgba(6,6,10,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(45,212,191,0.12);
+  overflow: hidden;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.icon-ticker::before,
+.icon-ticker::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.icon-ticker::before { left: 0; background: linear-gradient(90deg, rgba(6,6,10,0.95), transparent); }
+.icon-ticker::after  { right: 0; background: linear-gradient(270deg, rgba(6,6,10,0.95), transparent); }
+.ticker-track {
+  display: flex;
+  gap: 0;
+  animation: tickerScroll 35s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
+}
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 1.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+.ticker-item + .ticker-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(45,212,191,0.3);
+}
+.ticker-icon {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: rgba(45,212,191,0.08);
+  border: 1px solid rgba(45,212,191,0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--teal-400);
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.ticker-item:hover { color: var(--teal-400); }
+.ticker-item:hover .ticker-icon {
+  background: rgba(45,212,191,0.18);
+  border-color: rgba(45,212,191,0.4);
+  transform: scale(1.15);
+}
+
+/* ── LAYOUT ── */
+.page {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1; width: 100%;
+}
+
+/* ── SECTION LABEL ── */
+.label {
+  font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--teal-400); font-weight: 700;
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.label::before {
+  content: ''; width: 18px; height: 2px;
+  background: linear-gradient(90deg, var(--teal-400), var(--teal-600));
+  border-radius: 2px;
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--dark-800);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--teal-400), var(--teal-600), transparent);
+}
+.card-head {
+  padding: 1.2rem 1.4rem 0.8rem;
+  border-bottom: 1px solid var(--border-soft);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-title { font-size: 0.9rem; font-weight: 700; }
+.card-body { padding: 1.25rem 1.4rem; }
+
+/* ── CALENDAR ── */
+.cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem; }
+.cal-month { font-size: 1rem; font-weight: 800; letter-spacing: -0.3px; }
+.cal-nav-btn {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: rgba(45,212,191,0.08); border: 1px solid var(--border);
+  color: var(--teal-400); cursor: pointer; display: flex;
+  align-items: center; justify-content: center; font-size: 0.75rem;
+  transition: background 0.2s;
+}
+.cal-nav-btn:hover { background: rgba(45,212,191,0.18); }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-dow {
+  font-size: 0.6rem; font-weight: 700; text-align: center;
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;
+  padding-bottom: 8px;
+}
+.cal-day {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 500; border-radius: 8px;
+  cursor: pointer; transition: background 0.15s, color 0.15s;
+  position: relative; color: var(--text-muted);
+}
+.cal-day:hover:not(.empty):not(.today):not(.selected) { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+.cal-day.other-month { opacity: 0.25; }
+.cal-day.today { background: rgba(45,212,191,0.15); color: var(--teal-400); font-weight: 700; border: 1px solid rgba(45,212,191,0.3); }
+.cal-day.selected { background: linear-gradient(135deg, var(--teal-400), var(--teal-600)); color: var(--dark-950); font-weight: 800; }
+.cal-day.has-event::after {
+  content: ''; position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: var(--teal-400);
+}
+.cal-day.selected.has-event::after { background: var(--dark-950); }
+
+/* ── PLANNER COLUMN ── */
+.planner-col { display: flex; flex-direction: column; gap: 12px; }
+
+/* ── DAY PLANNER ── */
+.day-sub { font-size: 0.7rem; color: var(--text-muted); margin-top: 1px; }
+.add-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(45,212,191,0.1); border: 1px solid var(--border);
+  color: var(--teal-400); padding: 5px 12px; border-radius: 99px;
+  font-size: 0.72rem; font-weight: 700; cursor: pointer;
+  font-family: inherit; transition: background 0.2s;
+}
+.add-btn:hover { background: rgba(45,212,191,0.2); }
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-row { display: flex; gap: 12px; padding: 6px 0; cursor: pointer; }
+.tl-time { width: 38px; text-align: right; font-size: 0.65rem; color: var(--text-muted); font-weight: 600; padding-top: 10px; flex-shrink: 0; }
+.tl-spine { display: flex; flex-direction: column; align-items: center; gap: 0; flex-shrink: 0; }
+.tl-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; border: 2px solid var(--dark-800); }
+.tl-dot.teal  { background: var(--teal-400); box-shadow: 0 0 8px rgba(45,212,191,0.4); }
+.tl-dot.amber { background: #f59e0b; }
+.tl-dot.blue  { background: #60a5fa; }
+.tl-dot.gray  { background: var(--text-muted); }
+.tl-line { width: 1px; flex: 1; background: var(--border-soft); min-height: 20px; }
+.tl-item {
+  flex: 1; background: var(--dark-700); border: 1px solid var(--border-soft);
+  border-radius: 10px; padding: 8px 12px; min-height: 48px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.tl-item:hover { border-color: var(--border); background: var(--dark-600); }
+.tl-item.active { border-color: rgba(45,212,191,0.25); background: rgba(45,212,191,0.05); }
+.tl-item-title { font-size: 0.8rem; font-weight: 600; margin-bottom: 2px; }
+.tl-item-sub   { font-size: 0.67rem; color: var(--text-muted); }
+
+/* ── ADD FORM ── */
+.add-form {
+  background: var(--dark-700); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1rem; display: none; flex-direction: column; gap: 8px; margin-top: 4px;
+}
+.add-form.open { display: flex; }
+.form-row { display: flex; gap: 8px; }
+.form-input {
+  flex: 1; background: var(--dark-600); border: 1px solid rgba(45,212,191,0.12);
+  border-radius: 8px; padding: 8px 12px;
+  color: var(--text-primary); font-family: inherit; font-size: 0.78rem;
+  outline: none; transition: border-color 0.2s;
+}
+.form-input:focus { border-color: rgba(45,212,191,0.35); }
+.form-input::placeholder { color: var(--text-muted); }
+.form-select {
+  background: var(--dark-600); border: 1px solid rgba(45,212,191,0.12);
+  border-radius: 8px; padding: 8px 10px;
+  color: var(--text-muted); font-family: inherit; font-size: 0.78rem;
+  outline: none; cursor: pointer; appearance: none;
+}
+.save-btn {
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-600));
+  color: var(--dark-950); border: none; border-radius: 8px;
+  padding: 8px 18px; font-family: inherit; font-size: 0.78rem; font-weight: 700;
+  cursor: pointer; transition: filter 0.2s;
+}
+.save-btn:hover { filter: brightness(1.1); }
+.cancel-btn {
+  background: transparent; border: 1px solid var(--border-soft);
+  color: var(--text-muted); border-radius: 8px;
+  padding: 8px 14px; font-family: inherit; font-size: 0.78rem;
+  cursor: pointer; transition: color 0.2s;
+}
+.cancel-btn:hover { color: var(--text-primary); }
+
+/* ── NOTES ── */
+.notes-area {
+  width: 100%; background: var(--dark-700); border: 1px solid var(--border-soft);
+  border-radius: 10px; padding: 10px 12px;
+  color: var(--text-primary); font-family: inherit; font-size: 0.78rem;
+  resize: vertical; min-height: 80px; outline: none;
+  transition: border-color 0.2s; line-height: 1.6;
+}
+.notes-area:focus { border-color: var(--border); }
+.notes-area::placeholder { color: var(--text-muted); }
+
+/* ── SAVED NOTE CHIP ── */
+.note-chip {
+  background: var(--dark-700); border: 1px solid var(--border-soft);
+  border-radius: 10px; padding: 9px 12px;
+  display: flex; gap: 8px; align-items: flex-start;
+  transition: border-color 0.2s;
+}
+.note-chip:hover { border-color: var(--border); }
+.note-chip-body { flex: 1; min-width: 0; }
+.note-chip-text {
+  font-size: 0.76rem; color: var(--text-primary); line-height: 1.5;
+  white-space: pre-wrap; word-break: break-word;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.note-chip-meta { font-size: 0.62rem; color: var(--text-muted); margin-top: 4px; }
+.note-chip-del {
+  background: transparent; border: none; color: var(--text-muted);
+  font-size: 0.7rem; cursor: pointer; padding: 2px 4px; border-radius: 5px;
+  transition: color 0.15s; flex-shrink: 0; margin-top: 1px;
+}
+.note-chip-del:hover { color: #f87171; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark-900);
+  border-top: 1px solid var(--border-soft);
+  margin-top: 2rem;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: 2.5rem 2rem 0;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; margin-bottom: 0.9rem;
+}
+.footer-emblem {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-600));
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
+.footer-emblem::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 60%);
+}
+.footer-emblem svg { width: 16px; height: 16px; position: relative; z-index: 1; }
+.footer-wordmark { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.3px; }
+.footer-wordmark .c { color: var(--teal-400); }
+.footer-tagline { font-size: 0.8rem; color: var(--text-muted); line-height: 1.65; max-width: 240px; }
+.footer-col-title {
+  font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--teal-400); font-weight: 700; margin-bottom: 0.85rem;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a {
+  font-size: 0.82rem; color: var(--text-muted); text-decoration: none;
+  transition: color 0.2s; display: inline-flex; align-items: center; min-height: 28px;
+}
+.footer-links a:hover { color: var(--teal-400); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 2rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.footer-copy { font-size: 0.72rem; color: var(--text-muted); }
+.footer-social { display: flex; gap: 0.5rem; }
+.social-link {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--dark-700); border: 1px solid var(--border-soft);
+  color: var(--text-muted); text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.social-link:hover { background: rgba(45,212,191,0.1); border-color: var(--border); color: var(--teal-400); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 760px) {
+  .page { grid-template-columns: 1fr; padding: 1rem; }
+
+  /* footer */
+  .footer-inner { grid-template-columns: 1fr 1fr; padding: 2rem 1.25rem 0; }
+  .footer-brand-col { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; padding: 1rem 1.25rem; }
+
+  /* form rows stack on small screens */
+  .form-row { flex-wrap: wrap; }
+  .form-row .form-input,
+  .form-row .form-select { min-width: 0; }
+
+  /* make card-head wrap nicely */
+  .card-head { flex-wrap: wrap; gap: 8px; }
+
+  /* calculator grid — slightly smaller buttons */
+  #calc-grid button { padding: 10px 2px; font-size: 0.78rem; }
+
+  /* ticker smaller on mobile */
+  .ticker-item { font-size: 0.6rem; padding: 0 1rem; gap: 5px; }
+  .ticker-icon { width: 18px; height: 18px; font-size: 0.55rem; }
+}
+
+@media (max-width: 640px) {
+  nav { height: 58px; padding: 0.75rem 1rem; }
+  .icon-ticker { top: 58px; }
+  body { padding-top: 102px; } /* 58 + 44 */
+}
+
+@media (max-width: 400px) {
+  .page { padding: 0.75rem; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* animation removed — caused layout jump on load */
+.page { animation: none; }
+
+/* ── CUSTOM CURSOR ── */
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+
+  #cursor-outer {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 36px; height: 36px;
+    border: 2.5px solid var(--teal-400);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background 0.15s ease;
+    opacity: 0;
+  }
+
+  #cursor-inner {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 7px; height: 7px;
+    background: var(--teal-400);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  body.cursor-hover #cursor-outer {
+    width: 56px; height: 56px;
+    background: rgba(45,212,191,0.10);
+    border-color: var(--teal-400);
+    box-shadow: 0 0 18px rgba(45,212,191,0.25);
+  }
+
+  body.cursor-click #cursor-inner {
+    width: 14px; height: 14px;
+    background: var(--teal-500);
+  }
+
+  body.cursor-click #cursor-outer {
+    width: 28px; height: 28px;
+    background: rgba(45,212,191,0.18);
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- Hidden SVG defs — SCIERGE diamond gem mark -->
+<svg style="display:none">
+  <symbol id="diamond" viewBox="0 0 24 24" fill="none">
+    <polygon points="12,2 22,9 12,9" fill="rgba(6,6,10,0.22)"/>
+    <polygon points="12,2 2,9 12,9" fill="rgba(6,6,10,0.06)"/>
+    <polygon points="2,9 12,22 12,9" fill="rgba(0,0,0,0.28)"/>
+    <polygon points="22,9 12,22 12,9" fill="rgba(0,0,0,0.12)"/>
+    <polygon points="12,2 22,9 12,22 2,9" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.1" stroke-linejoin="round"/>
+    <line x1="2" y1="9" x2="22" y2="9" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+    <line x1="12" y1="2" x2="12" y2="9" stroke="rgba(255,255,255,0.35)" stroke-width="0.7"/>
+  </symbol>
+</svg>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-emblem">
+      <svg width="18" height="18"><use href="#diamond"/></svg>
+    </div>
+    <span class="nav-wordmark">S<span class="c">C</span>IERGE</span>
+  </a>
+
+ 
+  <div class="nav-search-wrap" id="navSearchWrap">
+    <input type="search" id="navSearchInput" class="nav-search-input" placeholder="Search experiences…" aria-label="Search">
+    <button class="nav-search-clear" id="navSearchClear" aria-label="Clear search">✕</button>
+  </div>
+ 
+    <a href="scierge_quote_updated (17).html"><button class="nav-cta" aria-label="Book Now">Book Now</button></a>
+  </div>
+  <button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── TICKER ── -->
+<div class="icon-ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Wellness & Spa</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+    <!-- duplicate set for seamless loop -->
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Wellness & Spa</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+  </div>
+</div>
+<div class="page">
+
+  <!-- LEFT: Calendar + Day Planner + Notes -->
+  <div>
+    <div class="label">Calendar</div>
+    <div class="card" style="margin-bottom:1.25rem;">
+      <div class="card-body">
+        <div class="cal-nav">
+          <button class="cal-nav-btn" onclick="changeMonth(-1)"><i class="fas fa-chevron-left"></i></button>
+          <div class="cal-month" id="cal-month-label"></div>
+          <button class="cal-nav-btn" onclick="changeMonth(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </div>
+
+    <div class="label">Day Planner</div>
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title" id="planner-title">Select a day</div>
+          <div class="day-sub" id="planner-sub">Click any date on the calendar above</div>
+        </div>
+        <button class="add-btn" onclick="toggleForm()"><i class="fas fa-plus"></i> Add</button>
+      </div>
+      <div class="card-body">
+        <div class="add-form" id="add-form">
+          <div class="form-row">
+            <input class="form-input" id="evt-title" placeholder="Event title…" style="flex:2">
+            <input class="form-input" id="evt-time"  placeholder="Time (e.g. 09:00)" style="flex:1">
+          </div>
+          <div class="form-row">
+            <select class="form-select" id="evt-type">
+              <option value="teal">✈ Flight</option>
+              <option value="amber">🏨 Hotel</option>
+              <option value="blue">🗺 Activity</option>
+              <option value="gray">📝 Note</option>
+            </select>
+            <input class="form-input" id="evt-note" placeholder="Details (optional)">
+          </div>
+          <div class="form-row" style="justify-content:flex-end;">
+            <button class="cancel-btn" onclick="toggleForm()">Cancel</button>
+            <button class="save-btn" onclick="saveEvent()">Save</button>
+          </div>
+        </div>
+        <div class="timeline" id="timeline">
+          <div style="text-align:center;padding:2rem 0;color:var(--text-muted);font-size:0.8rem;">
+            <i class="fas fa-calendar-day" style="font-size:1.5rem;display:block;margin-bottom:0.5rem;opacity:0.3;"></i>
+            Pick a date to start planning
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="label" style="margin-top:1.25rem;">Trip Notes</div>
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">Notes</div>
+        <button class="add-btn" id="save-note-btn" onclick="saveNote()"><i class="fas fa-save"></i> Save</button>
+      </div>
+      <div class="card-body">
+        <textarea class="notes-area" id="notes-area" placeholder="Jot down anything — visas, packing list, contacts, restaurant ideas…"></textarea>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+          <span style="font-size:0.65rem;color:var(--text-muted);" id="notes-char">0 characters</span>
+          <span style="font-size:0.65rem;color:var(--text-muted);opacity:0;transition:opacity 0.4s;" id="notes-saved-hint"><i class="fas fa-check" style="color:var(--teal-400);margin-right:4px;"></i>Saved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Itinerary Overview + Checklist -->
+  <div class="planner-col">
+
+    <div class="label">Itinerary Overview</div>
+    <div class="card">
+      <div class="card-body" style="display:flex;flex-direction:column;gap:10px;" id="overview-list">
+        <!-- populated by JS when events are added -->
+      </div>
+    </div>
+
+    <div class="label">Trip Checklist</div>
+    <div class="card">
+      <div class="card-body" style="display:flex;flex-direction:column;gap:4px;" id="checklist">
+        <!-- populated by JS -->
+      </div>
+    </div>
+
+    <div class="label">Saved Notes</div>
+    <div class="card" id="saved-notes-card">
+      <div class="card-body" style="display:flex;flex-direction:column;gap:8px;" id="saved-notes-list">
+        <div style="text-align:center;padding:1rem 0;color:var(--text-muted);font-size:0.78rem;opacity:0.6;">
+          <i class="fas fa-sticky-note" style="font-size:1.1rem;display:block;margin-bottom:0.4rem;opacity:0.3;"></i>
+          No notes saved yet
+        </div>
+      </div>
+    </div>
+
+    <div class="label">Trip Budget Calculator</div>
+    <div class="card" id="calc-card">
+      <div class="card-body" style="display:flex;flex-direction:column;gap:12px;">
+
+        <!-- Display -->
+        <div style="background:var(--dark-700);border:1px solid var(--border-soft);border-radius:12px;padding:12px 14px;text-align:right;position:relative;overflow:hidden;">
+          <div id="calc-expr" style="font-size:0.65rem;color:var(--text-muted);min-height:14px;margin-bottom:4px;letter-spacing:0.02em;word-break:break-all;">&nbsp;</div>
+          <div id="calc-result" style="font-size:1.55rem;font-weight:800;color:var(--text-primary);letter-spacing:-0.5px;line-height:1;">0</div>
+          <div style="position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--teal-400),var(--teal-600));border-radius:12px 0 0 12px;"></div>
+        </div>
+
+        <!-- Currency row -->
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:0.68rem;color:var(--text-muted);font-weight:600;">Currency</span>
+          <select id="calc-currency" onchange="calcUpdateDisplay()" style="flex:1;background:var(--dark-700);border:1px solid var(--border-soft);border-radius:8px;padding:5px 8px;color:var(--text-primary);font-family:inherit;font-size:0.75rem;outline:none;cursor:pointer;">
+            <option value="AED">AED — UAE Dirham</option>
+            <option value="USD">USD — US Dollar</option>
+            <option value="EUR">EUR — Euro</option>
+            <option value="GBP">GBP — British Pound</option>
+            <option value="SAR">SAR — Saudi Riyal</option>
+          </select>
+        </div>
+
+        <!-- Button grid -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;" id="calc-grid"></div>
+
+        <!-- Line items -->
+        <div style="border-top:1px solid var(--border-soft);padding-top:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:0.68rem;color:var(--teal-400);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Line Items</span>
+            <button onclick="calcAddLine()" style="background:rgba(45,212,191,0.1);border:1px solid var(--border);color:var(--teal-400);border-radius:99px;font-family:inherit;font-size:0.65rem;font-weight:700;padding:3px 10px;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='rgba(45,212,191,0.2)'" onmouseout="this.style.background='rgba(45,212,191,0.1)'">+ Add</button>
+          </div>
+          <div id="calc-lines" style="display:flex;flex-direction:column;gap:5px;"></div>
+          <div id="calc-total-row" style="display:none;margin-top:8px;padding:8px 10px;background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.15);border-radius:8px;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.72rem;color:var(--teal-400);font-weight:700;">Total</span>
+            <span id="calc-total-val" style="font-size:0.85rem;font-weight:800;color:var(--text-primary);"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /planner-col -->
+</div><!-- /page -->
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© 2026 SCIERGE. All rights reserved.</p>   
+  </div>
+</footer>
+
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+
+<script>
+// ── State
+let currentDate = new Date();
+let selectedDate = null;
+const today = new Date();
+today.setHours(0,0,0,0);
+
+const events = {};
+
+function fmt(d) {
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+
+// ── Calendar
+const DAYS   = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function renderCalendar() {
+  const y = currentDate.getFullYear(), m = currentDate.getMonth();
+  document.getElementById('cal-month-label').textContent = MONTHS[m] + ' ' + y;
+
+  const grid = document.getElementById('cal-grid');
+  grid.innerHTML = '';
+
+  DAYS.forEach(d => {
+    const el = document.createElement('div');
+    el.className = 'cal-dow'; el.textContent = d; grid.appendChild(el);
+  });
+
+  const firstDay    = new Date(y, m, 1).getDay();
+  const daysInMonth = new Date(y, m+1, 0).getDate();
+  const prevDays    = new Date(y, m, 0).getDate();
+
+  for (let i = firstDay - 1; i >= 0; i--) {
+    const el = document.createElement('div');
+    el.className = 'cal-day other-month'; el.textContent = prevDays - i; grid.appendChild(el);
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const el = document.createElement('div');
+    el.className = 'cal-day'; el.textContent = d;
+    const dateObj = new Date(y, m, d);
+    const key = fmt(dateObj);
+    if (dateObj.getTime() === today.getTime()) el.classList.add('today');
+    if (selectedDate && key === fmt(selectedDate)) el.classList.add('selected');
+    if (events[key]) el.classList.add('has-event');
+    el.addEventListener('click', () => selectDate(new Date(y, m, d)));
+    grid.appendChild(el);
+  }
+
+  const total = firstDay + daysInMonth;
+  const remaining = total % 7 === 0 ? 0 : 7 - (total % 7);
+  for (let d = 1; d <= remaining; d++) {
+    const el = document.createElement('div');
+    el.className = 'cal-day other-month'; el.textContent = d; grid.appendChild(el);
+  }
+}
+
+function changeMonth(dir) {
+  currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + dir, 1);
+  renderCalendar();
+}
+
+// ── Day Planner
+function selectDate(date) {
+  selectedDate = date;
+  renderCalendar();
+  const key  = fmt(date);
+  const opts = { weekday:'long', month:'long', day:'numeric' };
+  document.getElementById('planner-title').textContent = date.toLocaleDateString('en-GB', opts);
+  document.getElementById('planner-sub').textContent = date.getTime() === today.getTime() ? 'Today' : '';
+  renderTimeline(key);
+}
+
+function renderTimeline(key) {
+  const tl   = document.getElementById('timeline');
+  const evts = events[key] || [];
+  if (evts.length === 0) {
+    tl.innerHTML = '<div style="text-align:center;padding:1.5rem 0;color:var(--text-muted);font-size:0.78rem;"><i class="fas fa-plus-circle" style="font-size:1.2rem;display:block;margin-bottom:0.4rem;opacity:0.25;"></i>No events yet — add one above</div>';
+    return;
+  }
+  tl.innerHTML = '';
+  evts.forEach((ev, i) => {
+    const row = document.createElement('div');
+    row.className = 'tl-row';
+    const isLast = i === evts.length - 1;
+    row.innerHTML = `
+      <div class="tl-time">${ev.time}</div>
+      <div class="tl-spine">
+        <div class="tl-dot ${ev.type}"></div>
+        ${!isLast ? '<div class="tl-line"></div>' : ''}
+      </div>
+      <div class="tl-item ${ev.type === 'teal' ? 'active' : ''}">
+        <div class="tl-item-title">${ev.title}</div>
+        <div class="tl-item-sub">${ev.sub}</div>
+      </div>`;
+    tl.appendChild(row);
+  });
+}
+
+// ── Add Event Form
+function toggleForm() {
+  const f = document.getElementById('add-form');
+  f.classList.toggle('open');
+  if (f.classList.contains('open')) document.getElementById('evt-title').focus();
+}
+
+function saveEvent() {
+  const title = document.getElementById('evt-title').value.trim();
+  const time  = document.getElementById('evt-time').value.trim() || '—';
+  const type  = document.getElementById('evt-type').value;
+  const sub   = document.getElementById('evt-note').value.trim();
+  if (!title || !selectedDate) return;
+  const key = fmt(selectedDate);
+  if (!events[key]) events[key] = [];
+  events[key].push({ time, title, sub, type });
+  events[key].sort((a,b) => a.time.localeCompare(b.time));
+  document.getElementById('evt-title').value = '';
+  document.getElementById('evt-time').value  = '';
+  document.getElementById('evt-note').value  = '';
+  toggleForm();
+  renderCalendar();
+  renderTimeline(key);
+  renderOverview();
+}
+
+// ── Overview
+function renderOverview() {
+  const list = document.getElementById('overview-list');
+  const keys = Object.keys(events).sort();
+  if (keys.length === 0) {
+    list.innerHTML = '<div style="color:var(--text-muted);font-size:0.78rem;text-align:center;padding:1rem 0;opacity:0.6;"><i class="fas fa-route" style="display:block;font-size:1.1rem;margin-bottom:0.4rem;opacity:0.3;"></i>Add events to build your itinerary</div>';
+    return;
+  }
+  list.innerHTML = '';
+  keys.forEach(k => {
+    const evts  = events[k];
+    const d     = new Date(k + 'T00:00:00');
+    const label = d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short' });
+    const block = document.createElement('div');
+    block.style.cssText = 'display:flex;gap:10px;align-items:flex-start;cursor:pointer;';
+    block.innerHTML = `
+      <div style="min-width:52px;text-align:right;font-size:0.65rem;color:var(--text-muted);font-weight:600;padding-top:3px;">${label}</div>
+      <div style="display:flex;flex-direction:column;gap:4px;flex:1;">
+        ${evts.map(ev=>`
+          <div style="display:flex;align-items:center;gap:6px;padding:5px 10px;background:var(--dark-700);border-radius:8px;border:1px solid var(--border-soft);">
+            <div style="width:6px;height:6px;border-radius:50%;background:${colorOf(ev.type)};flex-shrink:0;"></div>
+            <span style="font-size:0.73rem;font-weight:600;">${ev.title}</span>
+            <span style="font-size:0.65rem;color:var(--text-muted);margin-left:auto;">${ev.time}</span>
+          </div>`).join('')}
+      </div>`;
+    block.addEventListener('click', () => {
+      selectedDate = d;
+      currentDate  = new Date(d.getFullYear(), d.getMonth(), 1);
+      renderCalendar();
+      selectDate(d);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    list.appendChild(block);
+  });
+}
+
+function colorOf(type) {
+  return { teal:'#2dd4bf', amber:'#f59e0b', blue:'#60a5fa', gray:'#6b7280' }[type] || '#6b7280';
+}
+
+// ── Checklist
+const checkItems = [
+  'Passport valid 6+ months',
+  'Visa obtained',
+  'Online check-in done',
+  'Boarding passes saved',
+  'Travel insurance active',
+  'Hotel confirmation saved',
+  'Airport transfer booked',
+  'Foreign currency exchanged',
+];
+
+function renderChecklist() {
+  const cl = document.getElementById('checklist');
+  cl.innerHTML = '';
+  checkItems.forEach((item, i) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:center;gap:10px;padding:6px 2px;border-bottom:1px solid rgba(255,255,255,0.03);cursor:pointer;';
+    row.innerHTML = `
+      <div id="chk-${i}" style="width:17px;height:17px;border-radius:5px;border:1.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;"></div>
+      <span style="font-size:0.76rem;font-weight:500;color:var(--text-muted);" id="chktxt-${i}">${item}</span>`;
+    row.addEventListener('click', () => {
+      const box  = document.getElementById('chk-' + i);
+      const txt  = document.getElementById('chktxt-' + i);
+      const done = box.dataset.done === '1';
+      box.dataset.done       = done ? '0' : '1';
+      box.style.background   = done ? '' : '#14b8a6';
+      box.style.borderColor  = done ? 'rgba(255,255,255,0.1)' : '#2dd4bf';
+      box.innerHTML          = done ? '' : '<i class="fas fa-check" style="color:#06060a;font-size:0.55rem;"></i>';
+      txt.style.textDecoration = done ? '' : 'line-through';
+      txt.style.opacity        = done ? '' : '0.4';
+    });
+    cl.appendChild(row);
+  });
+}
+
+// ── Notes
+const savedNotes = [];
+
+function saveNote() {
+  const ta   = document.getElementById('notes-area');
+  const text = ta.value.trim();
+  if (!text) return;
+
+  const now  = new Date();
+  const time = now.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' })
+             + ' · ' + now.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+
+  savedNotes.unshift({ text, time, id: Date.now() });
+  renderSavedNotes();
+
+  // Flash "Saved" hint
+  const hint = document.getElementById('notes-saved-hint');
+  hint.style.opacity = '1';
+  setTimeout(() => hint.style.opacity = '0', 2000);
+
+  ta.value = '';
+  document.getElementById('notes-char').textContent = '0 characters';
+}
+
+function renderSavedNotes() {
+  const list = document.getElementById('saved-notes-list');
+  if (savedNotes.length === 0) {
+    list.innerHTML = '<div style="text-align:center;padding:1rem 0;color:var(--text-muted);font-size:0.78rem;opacity:0.6;"><i class="fas fa-sticky-note" style="font-size:1.1rem;display:block;margin-bottom:0.4rem;opacity:0.3;"></i>No notes saved yet</div>';
+    return;
+  }
+  list.innerHTML = '';
+  savedNotes.forEach(n => {
+    const chip = document.createElement('div');
+    chip.className = 'note-chip';
+    chip.innerHTML = `
+      <div class="note-chip-body">
+        <div class="note-chip-text">${n.text.replace(/</g,'&lt;')}</div>
+        <div class="note-chip-meta"><i class="fas fa-clock" style="margin-right:4px;opacity:0.5;"></i>${n.time}</div>
+      </div>
+      <button class="note-chip-del" title="Delete note" onclick="deleteNote(${n.id})"><i class="fas fa-times"></i></button>`;
+    list.appendChild(chip);
+  });
+}
+
+function deleteNote(id) {
+  const idx = savedNotes.findIndex(n => n.id === id);
+  if (idx !== -1) savedNotes.splice(idx, 1);
+  renderSavedNotes();
+}
+
+// Char counter
+document.addEventListener('DOMContentLoaded', () => {
+  const ta = document.getElementById('notes-area');
+  if (ta) {
+    ta.addEventListener('input', () => {
+      document.getElementById('notes-char').textContent = ta.value.length + ' character' + (ta.value.length === 1 ? '' : 's');
+    });
+  }
+});
+
+// ── Budget Calculator
+(function() {
+  const SYMBOLS = { AED:'AED ', USD:'$', EUR:'€', GBP:'£', SAR:'SAR ' };
+  let calcExpr = '';
+  let calcLines = [];
+
+  const BTNS = [
+    { label:'C',   cls:'op',  action:'clear'  },
+    { label:'⌫',   cls:'op',  action:'back'   },
+    { label:'%',   cls:'op',  action:'pct'    },
+    { label:'÷',   cls:'op',  action:'÷'      },
+    { label:'7',   cls:'num', action:'7'      },
+    { label:'8',   cls:'num', action:'8'      },
+    { label:'9',   cls:'num', action:'9'      },
+    { label:'×',   cls:'op',  action:'×'      },
+    { label:'4',   cls:'num', action:'4'      },
+    { label:'5',   cls:'num', action:'5'      },
+    { label:'6',   cls:'num', action:'6'      },
+    { label:'−',   cls:'op',  action:'−'      },
+    { label:'1',   cls:'num', action:'1'      },
+    { label:'2',   cls:'num', action:'2'      },
+    { label:'3',   cls:'num', action:'3'      },
+    { label:'+',   cls:'op',  action:'+'      },
+    { label:'.',   cls:'num', action:'.'      },
+    { label:'0',   cls:'num', action:'0'      },
+    { label:'💾',  cls:'save',action:'save'   },
+    { label:'=',   cls:'eq',  action:'='      },
+  ];
+
+  function buildGrid() {
+    const grid = document.getElementById('calc-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    BTNS.forEach(b => {
+      const btn = document.createElement('button');
+      const baseStyle = 'border:none;border-radius:9px;font-family:inherit;font-size:0.82rem;font-weight:700;cursor:pointer;padding:11px 4px;transition:filter 0.15s,transform 0.1s;';
+      if (b.cls === 'eq') {
+        btn.style.cssText = baseStyle + 'background:linear-gradient(135deg,var(--teal-400),var(--teal-600));color:var(--dark-950);grid-column:span 1;';
+      } else if (b.cls === 'op') {
+        btn.style.cssText = baseStyle + 'background:rgba(45,212,191,0.12);color:var(--teal-400);border:1px solid rgba(45,212,191,0.15);';
+      } else if (b.cls === 'save') {
+        btn.style.cssText = baseStyle + 'background:rgba(45,212,191,0.08);color:var(--teal-400);border:1px solid rgba(45,212,191,0.12);font-size:0.9rem;';
+      } else {
+        btn.style.cssText = baseStyle + 'background:var(--dark-600);color:var(--text-primary);border:1px solid var(--border-soft);';
+      }
+      btn.textContent = b.label;
+      btn.addEventListener('mousedown', () => { btn.style.transform='scale(0.93)'; btn.style.filter='brightness(1.2)'; });
+      btn.addEventListener('mouseup',   () => { btn.style.transform=''; btn.style.filter=''; });
+      btn.addEventListener('mouseleave',() => { btn.style.transform=''; btn.style.filter=''; });
+      btn.addEventListener('click', () => calcPress(b.action));
+      grid.appendChild(btn);
+    });
+  }
+
+  window.calcUpdateDisplay = function() {
+    const sym = SYMBOLS[document.getElementById('calc-currency').value] || '';
+    const exprEl = document.getElementById('calc-expr');
+    const resEl  = document.getElementById('calc-result');
+    if (!exprEl || !resEl) return;
+    exprEl.textContent = calcExpr || '\u00a0';
+    const safe = calcExpr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');
+    let val = '0';
+    try { val = eval(safe); } catch(e) { val = calcExpr || '0'; }
+    if (typeof val === 'number' && isFinite(val)) {
+      resEl.textContent = sym + Number(val.toFixed(2)).toLocaleString();
+    } else {
+      resEl.textContent = sym + '0';
+    }
+  };
+
+  function calcCurrentValue() {
+    const safe = calcExpr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');
+    try { const v = eval(safe); return isFinite(v) ? Number(v.toFixed(2)) : null; } catch(e) { return null; }
+  }
+
+  function calcPress(action) {
+    if (action === 'clear') { calcExpr = ''; }
+    else if (action === 'back') { calcExpr = calcExpr.slice(0,-1); }
+    else if (action === 'pct') {
+      const v = calcCurrentValue();
+      if (v !== null) calcExpr = String(v / 100);
+    }
+    else if (action === '=') {
+      const v = calcCurrentValue();
+      if (v !== null) calcExpr = String(v);
+    }
+    else if (action === 'save') {
+      const v = calcCurrentValue();
+      if (v === null || calcExpr === '') return;
+      const sym = SYMBOLS[document.getElementById('calc-currency').value] || '';
+      calcLines.push({ label: 'Item ' + (calcLines.length + 1), amount: v, sym });
+      renderLines();
+      calcExpr = '';
+    }
+    else { calcExpr += action; }
+    calcUpdateDisplay();
+  }
+
+  function renderLines() {
+    const container = document.getElementById('calc-lines');
+    const totalRow  = document.getElementById('calc-total-row');
+    const totalVal  = document.getElementById('calc-total-val');
+    if (!container) return;
+    container.innerHTML = '';
+    if (calcLines.length === 0) { totalRow.style.display = 'none'; return; }
+    calcLines.forEach((line, i) => {
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex;align-items:center;gap:6px;';
+      row.innerHTML = `
+        <input value="${line.label}" style="flex:1;background:var(--dark-700);border:1px solid var(--border-soft);border-radius:7px;padding:5px 8px;color:var(--text-primary);font-family:inherit;font-size:0.72rem;outline:none;" oninput="calcLineLabel(${i},this.value)">
+        <span style="font-size:0.75rem;font-weight:700;color:var(--text-primary);white-space:nowrap;min-width:60px;text-align:right;">${line.sym}${line.amount.toLocaleString()}</span>
+        <button onclick="calcRemoveLine(${i})" style="background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:0.7rem;padding:2px 5px;border-radius:5px;transition:color 0.15s;" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='var(--text-muted)'"><i class="fas fa-times"></i></button>`;
+      container.appendChild(row);
+    });
+    const total = calcLines.reduce((s,l) => s + l.amount, 0);
+    const sym   = calcLines[0] ? calcLines[0].sym : '';
+    totalVal.textContent = sym + Number(total.toFixed(2)).toLocaleString();
+    totalRow.style.display = 'flex';
+  }
+
+  window.calcAddLine = function() {
+    const v = calcCurrentValue();
+    const sym = SYMBOLS[document.getElementById('calc-currency').value] || '';
+    const amount = (v !== null && calcExpr !== '') ? v : 0;
+    calcLines.push({ label: 'Item ' + (calcLines.length + 1), amount, sym });
+    if (amount) calcExpr = '';
+    renderLines();
+    calcUpdateDisplay();
+  };
+
+  window.calcRemoveLine = function(i) {
+    calcLines.splice(i, 1);
+    renderLines();
+  };
+
+  window.calcLineLabel = function(i, val) {
+    calcLines[i].label = val;
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    buildGrid();
+    calcUpdateDisplay();
+  });
+})();
+
+// ── Mobile nav toggle
+const menuBtn = document.getElementById('menu-btn');
+const navbar  = document.getElementById('navbar');
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    const open = navbar.classList.toggle('mobile-open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  // Close on link click
+  navbar.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      navbar.classList.remove('mobile-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// ── Init
+renderCalendar();
+renderOverview();
+renderChecklist();
+selectDate(today);
+
+// ── Custom Cursor (desktop only)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const cursorOuter = document.getElementById('cursor-outer');
+  const cursorInner = document.getElementById('cursor-inner');
+
+  let mouseX = 0, mouseY = 0;
+  let outerX = 0, outerY = 0;
+  let innerX = 0, innerY = 0;
+  let started = false;
+
+  function loop() {
+    outerX += (mouseX - outerX) * 0.15;
+    outerY += (mouseY - outerY) * 0.15;
+    cursorOuter.style.left = outerX + 'px';
+    cursorOuter.style.top  = outerY + 'px';
+
+    innerX += (mouseX - innerX) * 0.35;
+    innerY += (mouseY - innerY) * 0.35;
+    cursorInner.style.left = innerX + 'px';
+    cursorInner.style.top  = innerY + 'px';
+
+    requestAnimationFrame(loop);
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!started) {
+      // Snap to position on first move so cursor doesn't slide in from top-left
+      outerX = mouseX; outerY = mouseY;
+      innerX = mouseX; innerY = mouseY;
+      cursorOuter.style.opacity = '1';
+      cursorInner.style.opacity = '1';
+      started = true;
+      loop();
+    }
+  }, { passive: true });
+
+  // Hover & click states — use event delegation to cover dynamic elements
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest('a, button, input, select, textarea, .cal-day, .tl-row, .add-btn, .cal-nav-btn, .note-chip, .note-chip-del'))
+      document.body.classList.add('cursor-hover');
+  });
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest('a, button, input, select, textarea, .cal-day, .tl-row, .add-btn, .cal-nav-btn, .note-chip, .note-chip-del'))
+      document.body.classList.remove('cursor-hover');
+  });
+  document.addEventListener('mousedown', () => document.body.classList.add('cursor-click'));
+  document.addEventListener('mouseup',   () => document.body.classList.remove('cursor-click'));
+}
+</script>
+
+<style>
+@media (max-width: 767px) {
+  nav, .cookie-inner { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(6,6,10,0.97) !important; }
+  #cursor-outer, #cursor-inner { display: none !important; }
+  nav { will-change: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</body>
+</html>
