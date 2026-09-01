@@ -1,0 +1,22 @@
+{
+  "name": "SCIERGE | Luxury Concierge",
+  "short_name": "SCIERGE",
+  "description": "Bespoke luxury concierge packages – private jet charters, VIP tickets, chauffeur services, yacht events, helicopter tours, and exclusive lifestyle experiences.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#06060a",
+  "theme_color": "#2dd4bf",
+  "icons": [
+    {
+      "src": "https://iili.io/Cfvwo0l.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://iili.io/Cfvwo0l.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
