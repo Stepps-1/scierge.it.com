@@ -3047,6 +3047,7 @@ difference when I felt nothing would and she's changed my life. I can't recommen
   document.querySelectorAll('.exp-card').forEach(function(card) {
     card.addEventListener('click', function() {
       var id = card.id;
+      if (id === 'wellness-card') { openWellnessModal(); return; }
       var data = experiences[id];
       if (!data) return;
       document.getElementById('exp-modal-name').textContent = data.name;
@@ -3098,8 +3099,87 @@ difference when I felt nothing would and she's changed my life. I can't recommen
       document.getElementById('exp-modal').style.display = 'flex';
     });
   });
+
+  window.openWellnessModal = function() {
+    if (window.__modalRotateTimer) { clearInterval(window.__modalRotateTimer); window.__modalRotateTimer = null; }
+    var data = experiences['wellness-card'];
+    var photo = document.getElementById('wellness-modal-photo');
+    if (data && photo) { photo.src = data.img; photo.alt = data.name; }
+    document.getElementById('wellness-modal').style.display = 'flex';
+  };
 })();
+function closeWellnessModal() {
+  document.getElementById('wellness-modal').style.display = 'none';
+}
 </script>
+
+<!-- WELLNESS SERVICE MODAL -->
+<div id="wellness-modal" style="display:none;position:fixed;inset:0;z-index:99999;align-items:flex-start;justify-content:center;padding:3rem 1rem;background:rgba(6,6,10,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);overflow-y:auto;" onclick="if(event.target===this)closeWellnessModal()">
+  <div style="background:var(--dark-800);border:1px solid rgba(45,212,191,0.22);border-radius:24px;max-width:760px;width:100%;position:relative;box-shadow:0 40px 100px rgba(0,0,0,0.75);overflow:hidden;animation:fadeUp 0.35s ease both;">
+
+    <div style="position:relative;width:100%;height:260px;background:var(--dark-700);overflow:hidden;">
+      <img id="wellness-modal-photo" src="" alt="Lisa Skeffington" style="width:100%;height:100%;object-fit:contain;background:var(--dark-700);">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(18,18,26,0.97) 0%,rgba(18,18,26,0.4) 45%,transparent 80%);"></div>
+      <button onclick="closeWellnessModal()" style="position:absolute;top:1rem;right:1rem;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:8px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:1rem;z-index:5;">✕</button>
+      <div style="position:absolute;left:1.75rem;right:1.75rem;bottom:1.25rem;">
+        <span class="pkg-badge"><i class="fas fa-spa"></i> Worldwide ·</span>
+        <h2 style="font-size:1.55rem;font-weight:800;color:#fff;letter-spacing:-0.3px;margin-bottom:0.2rem;">Emotional Wellness &amp; Therapy</h2>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.75);font-weight:600;">with Lisa Skeffington &middot; Empowered Momentum</p>
+      </div>
+    </div>
+
+    <div style="padding:1.9rem 2.1rem 0.5rem;max-height:52vh;overflow-y:auto;">
+      <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.4rem;">There are moments when everything looks right from the outside &mdash; the diary is full, the image polished &mdash; yet underneath there is exhaustion, emotional strain, or the quiet sense of having lost yourself along the way. Through SCIERGE, clients are privately introduced to Lisa Skeffington, a consultant psychotherapist, trauma-informed mentor and wellbeing specialist with 27 years&rsquo; experience supporting brilliant women, high-profile individuals and their families.</p>
+
+      <h3 style="font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.2px;">The Coastal Escape Experience</h3>
+      <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.4rem;">Lisa&rsquo;s signature offering is the <em>Remove the Mask&trade;</em> Coastal Escape &mdash; a private, immersive two-day retreat on the Dorset coast, arranged as a fully private experience or a small curated group. With private accommodation included and nothing competing for your attention, deeper work happens in two days than months of traditional therapy &mdash; discreet, contained and genuinely transformative.</p>
+
+      <h3 style="font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.2px;">What Makes This Different</h3>
+      <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Rather than simply talking things through, Lisa works with the emotional and psychological blocks that keep people trapped in patterns they&rsquo;ve outgrown &mdash; easing the stress the body carries, clearing limiting beliefs, and strengthening communication with yourself and those closest to you. The process is bespoke, strategic and solution-focused, built for real, lasting change rather than an open-ended journey.</p>
+
+      <h3 style="font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:0.75rem;letter-spacing:-0.2px;">Private Client Options</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-bottom:1.6rem;">
+        <div style="background:var(--dark-700);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:0.85rem 1rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-400);font-weight:700;margin-bottom:0.3rem;">Intensive</div>
+          <div style="font-size:0.8rem;color:var(--text-primary);font-weight:600;margin-bottom:0.25rem;">Seeing Behind the Mask</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);line-height:1.5;">Three tailored workshops online over three weeks, for rapid clarity and direction.</div>
+        </div>
+        <div style="background:var(--dark-700);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:0.85rem 1rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-400);font-weight:700;margin-bottom:0.3rem;">Progressive</div>
+          <div style="font-size:0.8rem;color:var(--text-primary);font-weight:600;margin-bottom:0.25rem;">Anxious to Empowered</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);line-height:1.5;">Twelve weeks online with fortnightly sessions, building lasting emotional regulation.</div>
+        </div>
+        <div style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.25);border-radius:12px;padding:0.85rem 1rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-400);font-weight:700;margin-bottom:0.3rem;">Immersive</div>
+          <div style="font-size:0.8rem;color:var(--text-primary);font-weight:600;margin-bottom:0.25rem;">Remove the Mask&trade; Coastal Escape</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);line-height:1.5;">Two transformative days in Dorset with private accommodation, private or small group.</div>
+        </div>
+        <div style="background:var(--dark-700);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:0.85rem 1rem;">
+          <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-400);font-weight:700;margin-bottom:0.3rem;">Retainer</div>
+          <div style="font-size:0.8rem;color:var(--text-primary);font-weight:600;margin-bottom:0.25rem;">Ongoing Coastal Escapes</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);line-height:1.5;">Four escapes for the investment of three &mdash; sustained, rounded support.</div>
+        </div>
+        <div style="background:var(--dark-700);border:1px solid rgba(251,191,36,0.2);border-radius:12px;padding:0.85rem 1rem;grid-column:1 / -1;">
+          <div style="font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#fbbf24;font-weight:700;margin-bottom:0.3rem;">Extended &amp; Elite</div>
+          <div style="font-size:0.8rem;color:var(--text-primary);font-weight:600;margin-bottom:0.25rem;">Empowered and Unmasked Thrive Programme</div>
+          <div style="font-size:0.76rem;color:var(--text-muted);line-height:1.5;">Six months of sustained support for deep, lasting transformation and resilience.</div>
+        </div>
+      </div>
+
+      <div style="border-left:2px solid var(--teal-400);padding-left:1rem;margin-bottom:0.4rem;">
+        <p style="font-size:0.86rem;color:var(--text-primary);font-style:italic;line-height:1.7;">&ldquo;I never thought I&rsquo;d meet someone who&rsquo;d understand enough to really make a difference.&rdquo;</p>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.4rem;">&mdash; Private Client</p>
+      </div>
+    </div>
+
+    <div style="padding:1.4rem 2.1rem 2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center;">
+      <a href="scierge_quote_updated (17).html" onclick="closeWellnessModal()" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--teal-400),var(--teal-600));color:var(--dark-950);padding:0.8rem 1.6rem;border-radius:99px;font-size:0.78rem;font-weight:700;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;box-shadow:0 4px 18px rgba(45,212,191,0.3);">
+        <i class="fas fa-gem"></i> Book This Experience
+      </a>
+      <span style="font-size:0.74rem;color:var(--text-muted);">Arranged discreetly by SCIERGE .</span>
+    </div>
+  </div>
+</div>
 
 <!-- PHOTO LIGHTBOX -->
 <div id="photo-lightbox" style="display:none;position:fixed;inset:0;z-index:100000;align-items:center;justify-content:center;background:rgba(0,0,0,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);" onclick="if(event.target===this)this.style.display='none'">
