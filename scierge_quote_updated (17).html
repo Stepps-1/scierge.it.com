@@ -1138,6 +1138,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .pkg-drop-menu::-webkit-scrollbar-thumb { background: rgba(45,212,191,0.3); border-radius: 99px; }
 .pkg-drop-menu.open { max-height: 340px; opacity: 1; pointer-events: all; }
 
+.pkg-cat-label {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px 7px;
+  font-size: 0.62rem; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal-400);
+  background: var(--dark-600);
+  position: sticky; top: 0; z-index: 1;
+  border-bottom: 1px solid var(--border-soft);
+}
+.pkg-cat-label i { font-size: 0.68rem; width: 14px; text-align: center; }
+.pkg-cat-count {
+  margin-left: auto; font-weight: 600; color: var(--text-muted);
+  letter-spacing: 0; text-transform: none; font-size: 0.62rem;
+}
+
 .pkg-option {
   display: flex; align-items: center; gap: 12px;
   padding: 11px 14px; cursor: pointer;
@@ -1219,55 +1235,19 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 <!-- ICON TICKER -->
 <div class="icon-ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Emotional wellness & Therapy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane-departure"></i></span>Travel &amp; Transport</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-key"></i></span>Residences &amp; Living</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-champagne-glasses"></i></span>Events &amp; Occasions</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Water Adventures</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-mountain-sun"></i></span>Desert &amp; Land Adventures</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Automotive</span>
     <!-- duplicate set for seamless loop -->
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Emotional wellness & Therapy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane-departure"></i></span>Travel &amp; Transport</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-key"></i></span>Residences &amp; Living</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-champagne-glasses"></i></span>Events &amp; Occasions</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Water Adventures</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-mountain-sun"></i></span>Desert &amp; Land Adventures</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Automotive</span>
   </div>
 </div>
 
@@ -1351,23 +1331,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
           <!-- Drop menu -->
           <div class="pkg-drop-menu" id="pkgDropMenu">
 
-            <div class="pkg-option" data-pkg="Emotional wellness &amp; Therapy" data-emoji="🧘" data-hint="Restore. Rejuvenate. Revive." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🧘</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Emotional Wellness &amp; Therapy</div>
-                <div class="pkg-opt-desc">Curated spa retreats · Holistic treatments · Private wellness consultations</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="VIP Tickets" data-emoji="🎟️" data-hint="Access the Extraordinary." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🎟️</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">VIP Tickets</div>
-                <div class="pkg-opt-desc">Sports &amp; fashion events · Sold-out concerts &amp; galas · Paddock &amp; royal box access</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
+            <div class="pkg-cat-label"><i class="fas fa-plane-departure"></i> Travel &amp; Transport <span class="pkg-cat-count">5</span></div>
 
             <div class="pkg-option" data-pkg="Private Jet Charter" data-emoji="✈️" data-hint="The Sky Is Your Runway." data-vip="1" onclick="pickPkg(this)">
               <span class="pkg-opt-emoji">✈️</span>
@@ -1387,56 +1351,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
 
-            <div class="pkg-option" data-pkg="Chauffeur Services" data-emoji="🚘" data-hint="Arrive in Style. Every Time." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🚘</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Chauffeur Services</div>
-                <div class="pkg-opt-desc">Executive transfers · Airport meet &amp; greet · Luxury fleet on demand</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Car Detailing" data-emoji="🚗" data-hint="Your Car, Immaculate." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🚗</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Car Detailing</div>
-                <div class="pkg-opt-desc">Premium valeting · Paint protection · Interior &amp; exterior restoration</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Security" data-emoji="🛡️" data-hint="Protected. Discreet. Always." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🛡️</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Security</div>
-                <div class="pkg-opt-desc">Close protection · Advance security teams · Secure logistics &amp; transport</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Private Dining &amp; Restaurant Booking" data-emoji="🍽️" data-hint="Savour Every Moment." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🍽️</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Private Dining &amp; Restaurant Booking</div>
-                <div class="pkg-opt-desc">Exclusive tables · Michelin reservations · Bespoke private dining experiences</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Private Events on Yachts &amp; Cruises" data-emoji="⛵" data-hint="Sail. Celebrate. Indulge." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">⛵</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Private Events on Yachts &amp; Cruises</div>
-                <div class="pkg-opt-desc">Superyacht hire · Private charters · Bespoke onboard event planning</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
             <div class="pkg-option" data-pkg="Helicopter Tours" data-emoji="🚁" data-hint="See the World from Above." onclick="pickPkg(this)">
               <span class="pkg-opt-emoji">🚁</span>
               <div class="pkg-opt-body">
                 <div class="pkg-opt-name">Helicopter Tours</div>
                 <div class="pkg-opt-desc">Scenic flights · Private boarding · Champagne &amp; sunset experiences</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Chauffeur Services" data-emoji="🚘" data-hint="Arrive in Style. Every Time." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🚘</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Chauffeur Services</div>
+                <div class="pkg-opt-desc">Executive transfers · Airport meet &amp; greet · Luxury fleet on demand</div>
               </div>
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
@@ -1450,38 +1378,80 @@ input[type="time"]::-webkit-calendar-picker-indicator {
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
 
+            <div class="pkg-cat-label"><i class="fas fa-key"></i> Residences &amp; Living <span class="pkg-cat-count">4</span></div>
+
+            <div class="pkg-option" data-pkg="Apartments &amp; Villas" data-emoji="🏡" data-hint="Your Private Sanctuary." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🏡</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Apartments &amp; Villas</div>
+                <div class="pkg-opt-desc">Penthouses · Overwater villas · Cliffside retreats · Fully staffed</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Private Dining &amp; Restaurant Booking" data-emoji="🍽️" data-hint="Savour Every Moment." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🍽️</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Private Dining &amp; Restaurant Booking</div>
+                <div class="pkg-opt-desc">Exclusive tables · Michelin reservations · Bespoke private dining experiences</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Emotional wellness &amp; Therapy" data-emoji="🧘" data-hint="Restore. Rejuvenate. Revive." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🧘</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Emotional Wellness &amp; Therapy</div>
+                <div class="pkg-opt-desc">Curated spa retreats · Holistic treatments · Private wellness consultations</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Security" data-emoji="🛡️" data-hint="Protected. Discreet. Always." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🛡️</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Security</div>
+                <div class="pkg-opt-desc">Close protection · Advance security teams · Secure logistics &amp; transport</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-cat-label"><i class="fas fa-champagne-glasses"></i> Events &amp; Occasions <span class="pkg-cat-count">3</span></div>
+
+            <div class="pkg-option" data-pkg="VIP Tickets" data-emoji="🎟️" data-hint="Access the Extraordinary." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🎟️</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">VIP Tickets</div>
+                <div class="pkg-opt-desc">Sports &amp; fashion events · Sold-out concerts &amp; galas · Paddock &amp; royal box access</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Private Events on Yachts &amp; Cruises" data-emoji="⛵" data-hint="Sail. Celebrate. Indulge." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">⛵</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Private Events on Yachts &amp; Cruises</div>
+                <div class="pkg-opt-desc">Superyacht hire · Private charters · Bespoke onboard event planning</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Skypool Experience" data-emoji="🏊" data-hint="Float Above the City." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🏊</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Skypool Experience</div>
+                <div class="pkg-opt-desc">Transparent infinity pools · Private slots · Dubai · Singapore · Bangkok</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-cat-label"><i class="fas fa-water"></i> Water Adventures <span class="pkg-cat-count">8</span></div>
+
             <div class="pkg-option" data-pkg="Jet Ski" data-emoji="🌊" data-hint="Full Throttle on Open Water." onclick="pickPkg(this)">
               <span class="pkg-opt-emoji">🌊</span>
               <div class="pkg-opt-body">
                 <div class="pkg-opt-name">Jet Ski</div>
                 <div class="pkg-opt-desc">Private sessions · Dubai · Maldives · Miami waterfront</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Jet Car" data-emoji="⚡" data-hint="Feel the Force." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">⚡</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Jet Car</div>
-                <div class="pkg-opt-desc">Jet-powered supercar · Private track access · UAE &amp; USA</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Dune Buggy" data-emoji="🏜️" data-hint="Conquer the Desert." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🏜️</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Dune Buggy</div>
-                <div class="pkg-opt-desc">Desert guided convoys · Dubai · Morocco · Qatar</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
-
-            <div class="pkg-option" data-pkg="Quad Bikes" data-emoji="🏍️" data-hint="No Roads. No Rules." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🏍️</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Quad Bikes</div>
-                <div class="pkg-opt-desc">Mountain &amp; beach trails · Expert guides · Worldwide locations</div>
               </div>
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
@@ -1540,6 +1510,35 @@ input[type="time"]::-webkit-calendar-picker-indicator {
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
 
+            <div class="pkg-option" data-pkg="Jet Car" data-emoji="⚡" data-hint="Feel the Force." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">⚡</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Jet Car</div>
+                <div class="pkg-opt-desc">Jet-powered supercar · Private track access · UAE &amp; USA</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-cat-label"><i class="fas fa-mountain-sun"></i> Desert &amp; Land Adventures <span class="pkg-cat-count">4</span></div>
+
+            <div class="pkg-option" data-pkg="Dune Buggy" data-emoji="🏜️" data-hint="Conquer the Desert." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🏜️</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Dune Buggy</div>
+                <div class="pkg-opt-desc">Desert guided convoys · Dubai · Morocco · Qatar</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
+            <div class="pkg-option" data-pkg="Quad Bikes" data-emoji="🏍️" data-hint="No Roads. No Rules." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🏍️</span>
+              <div class="pkg-opt-body">
+                <div class="pkg-opt-name">Quad Bikes</div>
+                <div class="pkg-opt-desc">Mountain &amp; beach trails · Expert guides · Worldwide locations</div>
+              </div>
+              <i class="fas fa-check pkg-opt-check"></i>
+            </div>
+
             <div class="pkg-option" data-pkg="Camel Ride" data-emoji="🐪" data-hint="Journey Through the Desert." onclick="pickPkg(this)">
               <span class="pkg-opt-emoji">🐪</span>
               <div class="pkg-opt-body">
@@ -1558,20 +1557,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
 
-            <div class="pkg-option" data-pkg="Skypool Experience" data-emoji="🏊" data-hint="Float Above the City." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🏊</span>
-              <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Skypool Experience</div>
-                <div class="pkg-opt-desc">Transparent infinity pools · Private slots · Dubai · Singapore · Bangkok</div>
-              </div>
-              <i class="fas fa-check pkg-opt-check"></i>
-            </div>
+            <div class="pkg-cat-label"><i class="fas fa-car"></i> Automotive <span class="pkg-cat-count">1</span></div>
 
-            <div class="pkg-option" data-pkg="Apartments &amp; Villas" data-emoji="🏡" data-hint="Your Private Sanctuary." onclick="pickPkg(this)">
-              <span class="pkg-opt-emoji">🏡</span>
+            <div class="pkg-option" data-pkg="Car Detailing" data-emoji="🚗" data-hint="Your Car, Immaculate." onclick="pickPkg(this)">
+              <span class="pkg-opt-emoji">🚗</span>
               <div class="pkg-opt-body">
-                <div class="pkg-opt-name">Apartments &amp; Villas</div>
-                <div class="pkg-opt-desc">Penthouses · Overwater villas · Cliffside retreats · Fully staffed</div>
+                <div class="pkg-opt-name">Car Detailing</div>
+                <div class="pkg-opt-desc">Premium valeting · Paint protection · Interior &amp; exterior restoration</div>
               </div>
               <i class="fas fa-check pkg-opt-check"></i>
             </div>
