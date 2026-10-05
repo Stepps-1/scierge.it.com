@@ -379,7 +379,10 @@ nav.mobile-open .nav-links a:hover { color: var(--teal-400); }
 .icon-ticker::after  { right: 0; background: linear-gradient(270deg, rgba(6,6,10,0.95), transparent); }
 .ticker-track {
   display: flex; gap: 0;
-  animation: tickerScroll 30s linear infinite;
+  width: max-content; flex-shrink: 0;
+  /* Fallback speed; the script after the ticker markup sets the real
+     duration from TICKER_SPEED so the pace is the same on every screen. */
+  animation: tickerScroll 8s linear infinite;
   will-change: transform; white-space: nowrap;
 }
 .ticker-track:hover { animation-play-state: paused; }
@@ -394,7 +397,7 @@ nav.mobile-open .nav-links a:hover { color: var(--teal-400); }
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--text-muted); white-space: nowrap; position: relative;
 }
-.ticker-item + .ticker-item::before {
+.ticker-item::before {
   content: ''; position: absolute; left: 0; top: 50%;
   transform: translateY(-50%);
   width: 3px; height: 3px; border-radius: 50%;
@@ -1243,9 +1246,53 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane-departure"></i></span>Travel &amp; Transport</span>
     <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-key"></i></span>Residences &amp; Living</span>
     <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-champagne-glasses"></i></span>Events &amp; Occasions</span>
-    
+
   </div>
 </div>
+<script>
+/* Ticker: repeat the items until they cover the whole bar (no empty gap
+   on wide screens) and scroll at a fixed speed on every screen size. */
+(function () {
+  var TICKER_SPEED = 90; // pixels per second: higher = faster, lower = slower
+
+  var track = document.querySelector('.icon-ticker .ticker-track');
+  if (!track) return;
+  var items = track.querySelectorAll('.ticker-item');
+  var setSize = Math.max(1, Math.floor(items.length / 2)); // markup holds the set twice
+  var baseSet = [];
+  for (var i = 0; i < setSize; i++) baseSet.push(items[i].cloneNode(true));
+
+  var lastWidth = 0;
+  function build() {
+    var barWidth = track.parentNode.clientWidth || window.innerWidth;
+    if (barWidth === lastWidth) return;
+    lastWidth = barWidth;
+
+    // Measure one set at the current font sizes.
+    track.innerHTML = '';
+    baseSet.forEach(function (n) { track.appendChild(n.cloneNode(true)); });
+    var setWidth = track.offsetWidth || 1;
+
+    // Each half of the track must be wider than the bar; the animation
+    // slides exactly one half, so the second half lines up seamlessly.
+    var copiesPerHalf = Math.ceil(barWidth / setWidth) + 1;
+    var frag = document.createDocumentFragment();
+    for (var c = 1; c < copiesPerHalf * 2; c++) {
+      baseSet.forEach(function (n) { frag.appendChild(n.cloneNode(true)); });
+    }
+    track.appendChild(frag);
+
+    track.style.animationDuration = (setWidth * copiesPerHalf / TICKER_SPEED) + 's';
+  }
+
+  build();
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(build, 150); });
+  // Re-measure once web fonts have loaded, since they change the item widths.
+  window.addEventListener('load', function () { lastWidth = 0; build(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { lastWidth = 0; build(); });
+})();
+</script>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
