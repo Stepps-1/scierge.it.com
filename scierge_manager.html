@@ -9,14 +9,10 @@
 <title>SCIERGE | Trip Planner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* Font Awesome font-display override */
-@font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; }
-@font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; }
-
 :root {
   --dark-950: #06060a;
   --dark-900: #0a0a0f;
@@ -81,83 +77,8 @@ nav {
 .nav-links a.active { color: var(--teal-400); }
 
 /* CTA button */
-
-/* ── NAV SEARCH ── */
-.nav-search-btn {
-  display: flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px;
-  background: rgba(45,212,191,0.1);
-  border: 1px solid rgba(45,212,191,0.2);
-  border-radius: 8px;
-  color: var(--teal-400);
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: background 0.2s, border-color 0.2s;
-  flex-shrink: 0;
-}
-.nav-search-btn:hover { background: rgba(45,212,191,0.18); border-color: rgba(45,212,191,0.4); }
-
-.nav-search-wrap {
-  display: flex; align-items: center;
-  max-width: 0; overflow: hidden;
-  transition: max-width 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease;
-  opacity: 0; position: relative;
-}
-.nav-search-wrap.open { max-width: 260px; opacity: 1; }
-@media (max-width: 767px) {
-  .nav-search-wrap.open { max-width: 160px; }
-}
-
-.nav-search-input {
-  background: var(--dark-700);
-  border: 1px solid rgba(45,212,191,0.25);
-  border-radius: 8px;
-  padding: 0.45rem 2rem 0.45rem 0.75rem;
-  color: var(--text-primary);
-  font-family: inherit; font-size: 0.82rem;
-  outline: none; width: 100%;
-  transition: border-color 0.2s;
-  -webkit-appearance: none;
-}
-.nav-search-input:focus { border-color: rgba(45,212,191,0.55); }
-.nav-search-input::placeholder { color: var(--text-muted); }
-
-.nav-search-clear {
-  position: absolute; right: 8px;
-  background: none; border: none;
-  color: var(--text-muted); cursor: pointer;
-  font-size: 0.7rem; padding: 2px; display: none;
-}
-.nav-search-clear.visible { display: block; }
-
-.nav-search-results {
-  position: fixed;
-  top: 64px; left: 50%; transform: translateX(-50%);
-  width: min(calc(100vw - 2rem), 420px);
-  background: var(--dark-800);
-  border: 1px solid rgba(45,212,191,0.2);
-  border-radius: 12px;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
-  z-index: 200; overflow: hidden;
-  animation: slideDown 0.2s ease;
-}
-.nav-search-result-item {
-  display: flex; align-items: center; gap: 10px;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  cursor: pointer; transition: background 0.15s;
-  text-decoration: none;
-}
-.nav-search-result-item:last-child { border-bottom: none; }
-.nav-search-result-item:hover { background: rgba(45,212,191,0.06); }
-.nav-search-result-icon { color: var(--teal-400); font-size: 0.85rem; width: 18px; text-align: center; flex-shrink: 0; }
-.nav-search-result-name { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
-.nav-search-result-loc { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
-.nav-search-no-results { padding: 1rem; text-align: center; font-size: 0.82rem; color: var(--text-muted); }
-
 .nav-cta {
-  display: inline-flex;
-  font-size: 0.7rem; padding: 0.45rem 0.85rem;
+  display: none;
   background: linear-gradient(135deg, var(--teal-400), var(--teal-600));
   color: var(--dark-950); border: none; padding: 0.55rem 1.25rem;
   border-radius: 99px; font-family: inherit; font-size: 0.78rem; font-weight: 700;
@@ -181,28 +102,6 @@ nav.mobile-open .mobile-menu-btn span:nth-child(1) { transform: rotate(45deg) tr
 nav.mobile-open .mobile-menu-btn span:nth-child(2) { opacity: 0; }
 nav.mobile-open .mobile-menu-btn span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
-/* ── MOBILE: hide Book Now, show in dropdown ── */
-@media (max-width: 767px) {
-  .nav-cta { display: none !important; }
-}
-nav.mobile-open .nav-cta {
-  display: flex !important;
-  position: absolute;
-  top: 100%; left: 0; right: 0;
-  border-radius: 0;
-  justify-content: center;
-  padding: 1rem;
-  font-size: 0.95rem; font-weight: 700;
-  background: var(--dark-800);
-  color: var(--teal-400) !important;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  animation: slideDown 0.3s ease;
-  text-decoration: none;
-  z-index: 99;
-}
-
 nav.mobile-open .nav-links {
   display: flex; flex-direction: column;
   position: absolute; top: 100%; left: 0; right: 0;
@@ -223,7 +122,7 @@ nav.mobile-open .nav-links a { display: flex; align-items: center; padding: 0.9r
 @media (min-width: 640px) {
   nav { padding: 1rem 2rem; }
   .nav-links { display: flex; }
-  /* nav-cta shown by default on desktop */
+  .nav-cta   { display: block; }
   .mobile-menu-btn { display: none; }
 }
 @media (min-width: 1024px) {
@@ -667,73 +566,79 @@ footer {
     <span class="nav-wordmark">S<span class="c">C</span>IERGE</span>
   </a>
 
- 
-  <div class="nav-search-wrap" id="navSearchWrap">
-    <input type="search" id="navSearchInput" class="nav-search-input" placeholder="Search experiences…" aria-label="Search">
-    <button class="nav-search-clear" id="navSearchClear" aria-label="Clear search">✕</button>
-  </div>
- 
-    <a href="scierge_quote_updated (17).html"><button class="nav-cta" aria-label="Book Now">Book Now</button></a>
-  </div>
+  <ul class="nav-links">
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#" class="active"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+  <a href="scierge_quote_updated (17).html" ><button class="nav-cta" aria-label="Book Now">Book Now</button></a href>
   <button class="mobile-menu-btn" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- ── TICKER ── -->
-<div class="icon-ticker" aria-hidden="true">
+ <div class="icon-ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Wellness & Spa</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane-departure"></i></span>Travel &amp; Transport</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-key"></i></span>Residences &amp; Living</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-champagne-glasses"></i></span>Events &amp; Occasions</span>
+  
     <!-- duplicate set for seamless loop -->
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-spa"></i></span>Wellness & Spa</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ticket-alt"></i></span>VIP Tickets</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane"></i></span>Private Jet Charter</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car"></i></span>Chauffeur Services</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-star"></i></span>Car Detailing</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-shield-alt"></i></span>Security</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-utensils"></i></span>Private Dining & Restaurant Booking</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-ship"></i></span>Private Events on Yachts & Cruises</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-helicopter"></i></span>Helicopter Tours</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-car-side"></i></span>Luxury Cars</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-water"></i></span>Jet Ski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-bolt"></i></span>Jet Car</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-truck-monster"></i></span>Dune Buggy</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-motorcycle"></i></span>Quad Bikes</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-tint"></i></span>Flyboard</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-wind"></i></span>E-foil</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-rocket"></i></span>Jetpack</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-fish"></i></span>Swim with Dolphins</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-life-ring"></i></span>Donut Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-skiing-nordic"></i></span>Waterski</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-paw"></i></span>Camel Ride</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-dove"></i></span>Falconry</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-swimming-pool"></i></span>Skypool Experience</span>
-    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-home"></i></span>Apartments & Villas</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-plane-departure"></i></span>Travel &amp; Transport</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-key"></i></span>Residences &amp; Living</span>
+    <span class="ticker-item"><span class="ticker-icon"><i class="fas fa-champagne-glasses"></i></span>Events &amp; Occasions</span>
+
   </div>
 </div>
+</div>
+<script>
+/* Ticker: repeat the items until they cover the whole bar (no empty gap
+   on wide screens) and scroll at a fixed speed on every screen size. */
+(function () {
+  var TICKER_SPEED = 90; // pixels per second: higher = faster, lower = slower
+
+  var track = document.querySelector('.icon-ticker .ticker-track');
+  if (!track) return;
+  var items = track.querySelectorAll('.ticker-item');
+  var setSize = Math.max(1, Math.floor(items.length / 2)); // markup holds the set twice
+  var baseSet = [];
+  for (var i = 0; i < setSize; i++) baseSet.push(items[i].cloneNode(true));
+
+  var lastWidth = 0;
+  function build() {
+    var barWidth = track.parentNode.clientWidth || window.innerWidth;
+    if (barWidth === lastWidth) return;
+    lastWidth = barWidth;
+
+    // Measure one set at the current font sizes.
+    track.innerHTML = '';
+    baseSet.forEach(function (n) { track.appendChild(n.cloneNode(true)); });
+    var setWidth = track.offsetWidth || 1;
+
+    // Each half of the track must be wider than the bar; the animation
+    // slides exactly one half, so the second half lines up seamlessly.
+    var copiesPerHalf = Math.ceil(barWidth / setWidth) + 1;
+    var frag = document.createDocumentFragment();
+    for (var c = 1; c < copiesPerHalf * 2; c++) {
+      baseSet.forEach(function (n) { frag.appendChild(n.cloneNode(true)); });
+    }
+    track.appendChild(frag);
+
+    track.style.animationDuration = (setWidth * copiesPerHalf / TICKER_SPEED) + 's';
+  }
+
+  build();
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(build, 150); });
+  // Re-measure once web fonts have loaded, since they change the item widths.
+  window.addEventListener('load', function () { lastWidth = 0; build(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { lastWidth = 0; build(); });
+})();
+</script>
+
 <div class="page">
 
   <!-- LEFT: Calendar + Day Planner + Notes -->
@@ -1368,15 +1273,5 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
 }
 </script>
 
-<style>
-@media (max-width: 767px) {
-  nav, .cookie-inner { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(6,6,10,0.97) !important; }
-  #cursor-outer, #cursor-inner { display: none !important; }
-  nav { will-change: auto; }
-}
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-}
-</style>
 </body>
 </html>
